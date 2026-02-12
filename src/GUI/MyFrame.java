@@ -10,6 +10,7 @@ public class MyFrame extends JFrame implements ActionListener {
     JButton redButton;
     JButton blueButton;
     JPanel panel;
+    JPanel panel2;
     JPanel trianglePanel;
     JPanel circlePanel;
     JPanel squarePanel;
@@ -19,7 +20,7 @@ public class MyFrame extends JFrame implements ActionListener {
     MyFrame(){
 
         layeredPane = new JLayeredPane();
-        layeredPane.setPreferredSize(new Dimension(400,400));
+        layeredPane.setBounds(0,0,1080, 720);
 
         greenButton = new JButton();
         greenButton.setBounds(700,520,250,100);
@@ -42,44 +43,42 @@ public class MyFrame extends JFrame implements ActionListener {
         panel = new JPanel();
         panel.setBounds(20,50,650,600);
         panel.setLayout(null);
-        panel.setBackground(Color.black);
-
-        trianglePanel = new JPanel();
-        trianglePanel.setBounds(70,70,100,100);
-        trianglePanel.add(trianglePanel);
-        trianglePanel.setBorder(BorderFactory.createLineBorder(Color.black));
-        trianglePanel.setLayout(null);
-        trianglePanel.setVisible(true);
+        panel.setBorder(BorderFactory.createLineBorder(Color.black));
 
 
+        panel2 = new JPanel();
+        panel2.setBounds(170,200,300,300);
+        panel2.setLayout(null);
+        panel2.setBackground(Color.green);
 
+        layeredPane.add(panel2, Integer.valueOf(1));
+        layeredPane.add(panel, Integer.valueOf(0));
+
+
+
+        this.add(layeredPane);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setSize(1080,720);
         this.setVisible(true);
         this.setTitle("GROUP 4 GUI");
         this.setResizable(false);
-        this.add(panel, Integer.valueOf(0));
-        layeredPane.add(trianglePanel, Integer.valueOf(1));
-        layeredPane.add(circlePanel, Integer.valueOf(1));
-        layeredPane.add(squarePanel, Integer.valueOf(1));
         this.add(greenButton);
         this.add(redButton);
         this.add(blueButton);
 
-        this.add(layeredPane);
         this.setVisible(true);
 
     }
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == greenButton){
-            panel.setBackground(Color.green);
+            panel2.setBackground(Color.green);
         }
         if(e.getSource() == redButton){
-            panel.setBackground(Color.red);
+            panel2.setBackground(Color.red);
         }
         if(e.getSource() == blueButton){
-            panel.setBackground(Color.blue);
+            panel2.setBackground(Color.blue);
         }
     }
 }
