@@ -11,15 +11,50 @@ public class MyFrame extends JFrame implements ActionListener {
     JButton blueButton;
     JPanel panel;
     JPanel panel2;
-    JPanel trianglePanel;
-    JPanel circlePanel;
-    JPanel squarePanel;
     JComboBox comboBox;
     String[] shapes = {"Square", "Circle","Triangle"};
+    int shape=0;
+    int color=0;
 
     JLayeredPane layeredPane;
+    public void paint(Graphics g){
+        super.paintComponents(g);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.drawRect(50,70, 650, 600);
+        g2d.setColor(Color.black);
+        g2d.setStroke(new BasicStroke(10));
+        switch(color){
+            case 0:
+                g2d.setPaint(Color.green);
+                break;
+            case 1:
+                g2d.setPaint(Color.red);
+                break;
+            case 2:
+                g2d.setPaint(Color.blue);
+                break;
+        }
 
+        int x =200, y=200, size=300;
+        switch(shape){
+            case 0:
+                g2d.fillRect(x,y,size,size);
+                break;
+            case 1:
+                g2d.fillOval(x,y,size,size);
+                break;
+            case 2:
+                int[] xcordi = {x,x + (size / 2), x +size};
+                int[] ycordi = {y +size,y,y+size};
+                g2d.fillPolygon(xcordi,ycordi,3);
+            break;
+        }
+
+
+
+    }
     MyFrame(){
+
 
         comboBox = new JComboBox(shapes);
         comboBox.addActionListener(this);
@@ -59,8 +94,6 @@ public class MyFrame extends JFrame implements ActionListener {
         panel2.setLayout(null);
         panel2.setBackground(Color.green);
 
-        layeredPane.add(panel2, Integer.valueOf(1));
-        layeredPane.add(panel, Integer.valueOf(0));
 
 
 
@@ -80,18 +113,28 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setVisible(true);
 
     }
+
+
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == greenButton){
-            panel2.setBackground(Color.green);
+            color=0;
+            repaint();
         }
         if(e.getSource() == redButton){
-            panel2.setBackground(Color.red);
+            color=1;
+            repaint();
         }
         if(e.getSource() == blueButton){
-            panel2.setBackground(Color.blue);
+            color=2;
+            repaint();
         }
         if(e.getSource() == comboBox){
             comboBox.getSelectedItem();
+        }
+
+        if(e.getSource()==comboBox){
+          shape=comboBox.getSelectedIndex();
+          repaint();
         }
     }
 }
