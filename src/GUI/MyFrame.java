@@ -14,10 +14,18 @@ public class MyFrame extends JFrame implements ActionListener {
     JPanel trianglePanel;
     JPanel circlePanel;
     JPanel squarePanel;
+    JComboBox comboBox;
+    String[] shapes = {"Square", "Circle","Triangle"};
 
     JLayeredPane layeredPane;
 
     MyFrame(){
+
+        comboBox = new JComboBox(shapes);
+        comboBox.addActionListener(this);
+        comboBox.setBounds(700,80,250,100);
+        comboBox.setBackground(Color.white);
+        comboBox.setFont(new Font("Comic Sans MS",Font.BOLD,35));
 
         layeredPane = new JLayeredPane();
         layeredPane.setBounds(0,0,1080, 720);
@@ -57,6 +65,8 @@ public class MyFrame extends JFrame implements ActionListener {
 
 
         this.add(layeredPane);
+
+        this.add(comboBox);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setSize(1080,720);
@@ -79,6 +89,9 @@ public class MyFrame extends JFrame implements ActionListener {
         }
         if(e.getSource() == blueButton){
             panel2.setBackground(Color.blue);
+        }
+        if(e.getSource() == comboBox){
+            comboBox.getSelectedItem();
         }
     }
 }
