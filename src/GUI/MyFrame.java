@@ -9,14 +9,11 @@ public class MyFrame extends JFrame implements ActionListener {
     JButton greenButton;
     JButton redButton;
     JButton blueButton;
-    JPanel panel;
-    JPanel panel2;
     JComboBox comboBox;
     String[] shapes = {"Square", "Circle","Triangle"};
     int shape=0;
     int color=0;
 
-    JLayeredPane layeredPane;
     public void paint(Graphics g){
         super.paintComponents(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -62,8 +59,6 @@ public class MyFrame extends JFrame implements ActionListener {
         comboBox.setBackground(Color.white);
         comboBox.setFont(new Font("Comic Sans MS",Font.BOLD,35));
 
-        layeredPane = new JLayeredPane();
-        layeredPane.setBounds(0,0,1080, 720);
 
         greenButton = new JButton();
         greenButton.setBounds(700,520,250,100);
@@ -83,27 +78,11 @@ public class MyFrame extends JFrame implements ActionListener {
         blueButton.addActionListener(this);
         blueButton.setBorder(BorderFactory.createLineBorder(Color.black));
 
-        panel = new JPanel();
-        panel.setBounds(20,50,650,600);
-        panel.setLayout(null);
-        panel.setBorder(BorderFactory.createLineBorder(Color.black));
-
-
-        panel2 = new JPanel();
-        panel2.setBounds(170,200,300,300);
-        panel2.setLayout(null);
-        panel2.setBackground(Color.green);
-
-
-
-
-        this.add(layeredPane);
 
         this.add(comboBox);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setSize(1080,720);
-        this.setVisible(true);
         this.setTitle("GROUP 4 GUI");
         this.setResizable(false);
         this.add(greenButton);
@@ -118,7 +97,7 @@ public class MyFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == greenButton){
             color=0;
-            repaint();
+           repaint();
         }
         if(e.getSource() == redButton){
             color=1;
@@ -128,10 +107,6 @@ public class MyFrame extends JFrame implements ActionListener {
             color=2;
             repaint();
         }
-        if(e.getSource() == comboBox){
-            comboBox.getSelectedItem();
-        }
-
         if(e.getSource()==comboBox){
           shape=comboBox.getSelectedIndex();
           repaint();
