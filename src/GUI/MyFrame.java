@@ -56,6 +56,7 @@ public class MyFrame extends JFrame implements ActionListener {
         comboBox = new JComboBox(shapes);
         comboBox.addActionListener(this);
         comboBox.setBounds(700,80,250,100);
+        comboBox.setFocusable(false);
         comboBox.setBackground(Color.white);
         comboBox.setFont(new Font("Comic Sans MS",Font.BOLD,35));
 
