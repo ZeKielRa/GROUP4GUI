@@ -6,9 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame implements ActionListener {
-    JButton greenButton;
-    JButton redButton;
-    JButton blueButton;
+
+
+    JButton[] buttons = new JButton[3];
     JComboBox comboBox;
     String[] shapes = {"Square", "Circle","Triangle"};
     int shape=0;
@@ -17,7 +17,7 @@ public class MyFrame extends JFrame implements ActionListener {
     public void paint(Graphics g){
         super.paintComponents(g);
         Graphics2D g2d = (Graphics2D) g;
-        g2d.drawRect(50,70, 650, 600);
+        g2d.drawRect(50,55, 600, 600);
         g2d.setColor(Color.black);
         g2d.setStroke(new BasicStroke(10));
         switch(color){
@@ -61,23 +61,23 @@ public class MyFrame extends JFrame implements ActionListener {
         comboBox.setFont(new Font("Comic Sans MS",Font.BOLD,35));
 
 
-        greenButton = new JButton();
-        greenButton.setBounds(700,520,250,100);
-        greenButton.setBackground(Color.green);
-        greenButton.addActionListener(this);
-        greenButton.setBorder(BorderFactory.createLineBorder(Color.black));
+        buttons[0] = new JButton();
+        buttons[0].setBounds(700,520,250,100);
+        buttons[0].setBackground(Color.green);
+        buttons[0].addActionListener(this);
+        buttons[0].setBorder(BorderFactory.createLineBorder(Color.black));
 
-        redButton = new JButton();
-        redButton.setBounds(700,400,250,100);
-        redButton.setBackground(Color.red);
-        redButton.addActionListener(this);
-        redButton.setBorder(BorderFactory.createLineBorder(Color.black));
+        buttons[1] = new JButton();
+        buttons[1].setBounds(700,400,250,100);
+        buttons[1].setBackground(Color.red);
+        buttons[1].addActionListener(this);
+        buttons[1].setBorder(BorderFactory.createLineBorder(Color.black));
 
-        blueButton = new JButton();
-        blueButton.setBounds(700,280,250,100);
-        blueButton.setBackground(Color.blue);
-        blueButton.addActionListener(this);
-        blueButton.setBorder(BorderFactory.createLineBorder(Color.black));
+        buttons[2] = new JButton();
+        buttons[2].setBounds(700,280,250,100);
+        buttons[2].setBackground(Color.blue);
+        buttons[2].addActionListener(this);
+        buttons[2].setBorder(BorderFactory.createLineBorder(Color.black));
 
 
         this.add(comboBox);
@@ -87,9 +87,9 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
         this.setTitle("GROUP 4 GUI");
         this.setResizable(false);
-        this.add(greenButton);
-        this.add(redButton);
-        this.add(blueButton);
+        this.add(buttons[0]);
+        this.add(buttons[1]);
+        this.add(buttons[2]);
 
         this.setVisible(true);
 
@@ -97,15 +97,15 @@ public class MyFrame extends JFrame implements ActionListener {
 
 
     public void actionPerformed(ActionEvent e){
-        if(e.getSource() == greenButton){
+        if(e.getSource() == buttons[0]){
             color=0;
            repaint();
         }
-        if(e.getSource() == redButton){
+        if(e.getSource() == buttons[1]){
             color=1;
             repaint();
         }
-        if(e.getSource() == blueButton){
+        if(e.getSource() == buttons[2]){
             color=2;
             repaint();
         }
