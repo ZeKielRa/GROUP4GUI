@@ -83,6 +83,7 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setSize(1080,720);
+        this.setLocationRelativeTo(null);
         this.setTitle("GROUP 4 GUI");
         this.setResizable(false);
         this.add(greenButton);
