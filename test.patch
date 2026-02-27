@@ -1,0 +1,277 @@
+Subject: [PATCH] test
+---
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/.gitignore	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,30 @@
++### IntelliJ IDEA ###
++out/
++!**/src/main/**/out/
++!**/src/test/**/out/
++.kotlin
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++bin/
++!**/src/main/**/bin/
++!**/src/test/**/bin/
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/.idea/.gitignore	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: .idea/material_theme_project_new.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/material_theme_project_new.xml b/.idea/material_theme_project_new.xml
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/.idea/material_theme_project_new.xml	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="MaterialThemeProjectNewConfig">
++    <option name="metadata">
++      <MTProjectMetadataState>
++        <option name="migrated" value="true" />
++        <option name="pristineConfig" value="false" />
++        <option name="userId" value="-3c96f925:19c285dab50:-7ffe" />
++      </MTProjectMetadataState>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/.idea/misc.xml	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,6 @@
++<project version="4">
++  <component name="KubernetesApiProvider">{}</component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="openjdk-25" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/.idea/modules.xml	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/GROUP4GUI.iml" filepath="$PROJECT_DIR$/GROUP4GUI.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/.idea/vcs.xml	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: GROUP4GUI.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/GROUP4GUI.iml b/GROUP4GUI.iml
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/GROUP4GUI.iml	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/GUI/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GUI/Main.java b/src/GUI/Main.java
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/src/GUI/Main.java	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,12 @@
++package GUI;
++
++import javax.swing.*;
++
++public class Main{
++    public static void main(String[] args){
++        new MyFrame();
++
++
++
++    }
++}
+\ No newline at end of file
+Index: src/GUI/MyFrame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GUI/MyFrame.java b/src/GUI/MyFrame.java
+new file mode 100644
+--- /dev/null	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
++++ b/src/GUI/MyFrame.java	(revision b133419ba0ad9ea6cb0b71a611a99f400efbcde3)
+@@ -0,0 +1,85 @@
++package GUI;
++
++import javax.swing.*;
++import java.awt.*;
++import java.awt.event.ActionEvent;
++import java.awt.event.ActionListener;
++
++public class MyFrame extends JFrame implements ActionListener {
++    JButton greenButton;
++    JButton redButton;
++    JButton blueButton;
++    JPanel panel;
++    JPanel trianglePanel;
++    JPanel circlePanel;
++    JPanel squarePanel;
++
++    JLayeredPane layeredPane;
++
++    MyFrame(){
++
++        layeredPane = new JLayeredPane();
++        layeredPane.setPreferredSize(new Dimension(400,400));
++
++        greenButton = new JButton();
++        greenButton.setBounds(700,520,250,100);
++        greenButton.setBackground(Color.green);
++        greenButton.addActionListener(this);
++        greenButton.setBorder(BorderFactory.createLineBorder(Color.black));
++
++        redButton = new JButton();
++        redButton.setBounds(700,400,250,100);
++        redButton.setBackground(Color.red);
++        redButton.addActionListener(this);
++        redButton.setBorder(BorderFactory.createLineBorder(Color.black));
++
++        blueButton = new JButton();
++        blueButton.setBounds(700,280,250,100);
++        blueButton.setBackground(Color.blue);
++        blueButton.addActionListener(this);
++        blueButton.setBorder(BorderFactory.createLineBorder(Color.black));
++
++        panel = new JPanel();
++        panel.setBounds(20,50,650,600);
++        panel.setLayout(null);
++        panel.setBackground(Color.black);
++
++        trianglePanel = new JPanel();
++        trianglePanel.setBounds(70,70,100,100);
++        trianglePanel.add(trianglePanel);
++        trianglePanel.setBorder(BorderFactory.createLineBorder(Color.black));
++        trianglePanel.setLayout(null);
++        trianglePanel.setVisible(true);
++
++
++
++        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
++        this.setLayout(null);
++        this.setSize(1080,720);
++        this.setVisible(true);
++        this.setTitle("GROUP 4 GUI");
++        this.setResizable(false);
++        this.add(panel, Integer.valueOf(0));
++        layeredPane.add(trianglePanel, Integer.valueOf(1));
++        layeredPane.add(circlePanel, Integer.valueOf(1));
++        layeredPane.add(squarePanel, Integer.valueOf(1));
++        this.add(greenButton);
++        this.add(redButton);
++        this.add(blueButton);
++
++        this.add(layeredPane);
++        this.setVisible(true);
++
++    }
++    public void actionPerformed(ActionEvent e){
++        if(e.getSource() == greenButton){
++            panel.setBackground(Color.green);
++        }
++        if(e.getSource() == redButton){
++            panel.setBackground(Color.red);
++        }
++        if(e.getSource() == blueButton){
++            panel.setBackground(Color.blue);
++        }
++    }
++}
